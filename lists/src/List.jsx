@@ -18,11 +18,13 @@ function List(){
     // fruits.sort((a, b) => b.calories - a.calories); // REVERSE NUMERICAL
 
     // Filter objects by criteria
-    const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
+    // const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
+    // const highCalFruits = fruits.filter(fruit => fruit.calories >= 100);
+            // Change instances of fruit, lowCalFruit to highCalFruit
 
-    const listItems = lowCalFruits.map(lowCalFruit => <li key={lowCalFruit.id}>
-                                                      {lowCalFruit.name}: &nbsp;
-                                                      <b>{lowCalFruit.calories}</b></li>);
+    const listItems = fruits.map(fruit => <li key={fruit.id}>
+                                                      {fruit.name}: &nbsp;
+                                                      <b>{fruit.calories}</b></li>);
 
     // Using the ArrowFunctions
         // For every fruits, do this (>), 
