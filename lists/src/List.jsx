@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 // working with list items to reusable
     // Passing in props
     // Be sure to use item not fruit when using sort method
@@ -52,5 +52,20 @@ function List(props){
     <h3 className="list-category">{category}</h3>
     <ol className="list-items">{listItems}</ol>
     </>);
+}
+// Setting up default props
+// Be sure to run Terminal-npm install prop-types
+// Verify in node_modules 'prop-types'
+List.propTypes = {
+    category: PropTypes.string,
+    items: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number,
+                                                name: PropTypes.string,
+                                                calories: PropTypes.number,
+    })),
+}
+List.defaultProps = {
+    category: "Category",
+    items: [],
+
 }
 export default List
