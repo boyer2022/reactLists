@@ -9,7 +9,7 @@ function List(props){
 
         const listItems = itemList.map(item => <li key={item.id}>
                                             
-                                           Name: {item.name} &nbsp;
+                                           Name: <b>{item.name}</b> &nbsp;
                                             <b>{item.calories}</b> Calories</li>);
 
 // function List(){
@@ -61,7 +61,7 @@ function List(props){
 List.propTypes = {
     category: PropTypes.string,
     items: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number,
-                                                name: PropTypes.string,
+                                                name: PropTypes.string.toUpperCase,
                                                 calories: PropTypes.number,
     })),
 }
