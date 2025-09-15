@@ -9,7 +9,7 @@ function List(props){
 
         const listItems = itemList.map(item => <li key={item.id}>
                                             
-                                            {item.name}: &nbsp;
+                                           Name: {item.name} &nbsp;
                                             <b>{item.calories}</b> Calories</li>);
 
 // function List(){
@@ -50,8 +50,9 @@ function List(props){
  // return (<ul>{listItems}</ul>);
 
     return( <>
-    <h3 className="list-category">{category}</h3>
+    <h3 className="list-category"><p>Type: {category}</p></h3>
     <ol className="list-items">{listItems}</ol>
+    
     </>);
 }
 // Setting up default props
