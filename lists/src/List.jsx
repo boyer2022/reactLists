@@ -61,7 +61,7 @@ function List(props){
 List.propTypes = {
     category: PropTypes.string,
     items: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number,
-                                                name: PropTypes.string.toUpperCase,
+                                                name: PropTypes.string,
                                                 calories: PropTypes.number,
     })),
 }
